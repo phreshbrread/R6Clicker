@@ -6,8 +6,8 @@ namespace R6Clicker
 {
     public partial class R6Clicker : Form
     {
-        int mouseClickX = 860;
-        int mouseClickY = 960;
+        readonly int mouseClickX = 860;
+        readonly int mouseClickY = 960;
 
         public R6Clicker()
         {
