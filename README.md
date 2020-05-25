@@ -12,3 +12,6 @@ You will probably only gain around 20-36 renown each time but if you leave it on
 ## Changelog
 ### v0.1
 - Initial upload
+
+## Todo
+- Allow for different resolutions and maybe aspect ratios
