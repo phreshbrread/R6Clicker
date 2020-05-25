@@ -7,7 +7,6 @@ It's currently made to funtion properly at 1920x1080 resolution, I don't think i
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
 2. Also set MM preferences to big maps only, I recommend just leaving it only on Fortress.
-
 _Note: If the map is too small you will die too fast and wont gain renown._
 3. Load into a solo training grounds match and start the clicker, it will then start working.
 4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically clicks the restart button so the process repeats itself.
