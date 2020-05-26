@@ -6,15 +6,20 @@ namespace R6Clicker
 {
     public partial class R6Clicker : Form
     {
-        readonly int mouseClickX = 860;
-        readonly int mouseClickY = 960;
+        //int displayResX = 1920;
+        //int displayResY = 1080;
+        int mouseClickX = 860;
+        int mouseClickY = 960;
+
+        
 
         public R6Clicker()
         {
-            // window size should be 815, 560
+            // window size should be 1267, 560
             InitializeComponent();
 
             IntervalBox.Text = ClickTimer.Interval.ToString();
+            ResolutionTextBox.Text = "1920x1080";
         }
 
         #region Import DLLs and stuff
@@ -38,6 +43,40 @@ namespace R6Clicker
         {
             ClickTimer.Enabled = false;
         }
+
+        #region Resolution button clicks
+        private void Res4k_Click(object sender, EventArgs e)
+        {
+            ResolutionTextBox.Text = "3840x2160";
+
+            mouseClickX = 1675;
+            mouseClickY = 1940;
+        }
+
+        private void Res1440p_Click(object sender, EventArgs e)
+        {
+            ResolutionTextBox.Text = "2560x1440";
+
+            mouseClickX = 1120;
+            mouseClickY = 1290;
+        }
+
+        private void Res1080p_Click(object sender, EventArgs e)
+        {
+            ResolutionTextBox.Text = "1920x1080";
+
+            mouseClickX = 860;
+            mouseClickY = 960;
+        }
+
+        private void Res768p_Click(object sender, EventArgs e)
+        {
+            ResolutionTextBox.Text = "1366x768";
+
+            mouseClickX = 595;
+            mouseClickY = 690;
+        }
+#endregion
 
         private void ClickTimer_Tick(object sender, EventArgs e)
         {
