@@ -36,11 +36,12 @@
             this.ClickIntervalLabel = new System.Windows.Forms.Label();
             this.IntervalBox = new System.Windows.Forms.TextBox();
             this.Res4k = new System.Windows.Forms.Button();
-            this.ResolutionLabel = new System.Windows.Forms.Label();
             this.Res1080p = new System.Windows.Forms.Button();
             this.ResolutionTextBox = new System.Windows.Forms.TextBox();
             this.Res768p = new System.Windows.Forms.Button();
             this.Res1440p = new System.Windows.Forms.Button();
+            this.ResolutionLabel = new System.Windows.Forms.Label();
+            this.CustomResButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,11 +110,53 @@
             this.Res4k.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res4k.Location = new System.Drawing.Point(793, 91);
             this.Res4k.Name = "Res4k";
-            this.Res4k.Size = new System.Drawing.Size(220, 204);
+            this.Res4k.Size = new System.Drawing.Size(220, 153);
             this.Res4k.TabIndex = 3;
             this.Res4k.Text = "3840x2160";
             this.Res4k.UseVisualStyleBackColor = true;
             this.Res4k.Click += new System.EventHandler(this.Res4k_Click);
+            // 
+            // Res1080p
+            // 
+            this.Res1080p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res1080p.Location = new System.Drawing.Point(793, 250);
+            this.Res1080p.Name = "Res1080p";
+            this.Res1080p.Size = new System.Drawing.Size(220, 154);
+            this.Res1080p.TabIndex = 5;
+            this.Res1080p.Text = "1920x1080";
+            this.Res1080p.UseVisualStyleBackColor = true;
+            this.Res1080p.Click += new System.EventHandler(this.Res1080p_Click);
+            // 
+            // ResolutionTextBox
+            // 
+            this.ResolutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResolutionTextBox.Location = new System.Drawing.Point(793, 43);
+            this.ResolutionTextBox.Name = "ResolutionTextBox";
+            this.ResolutionTextBox.ReadOnly = true;
+            this.ResolutionTextBox.Size = new System.Drawing.Size(446, 38);
+            this.ResolutionTextBox.TabIndex = 6;
+            // 
+            // Res768p
+            // 
+            this.Res768p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res768p.Location = new System.Drawing.Point(1019, 250);
+            this.Res768p.Name = "Res768p";
+            this.Res768p.Size = new System.Drawing.Size(220, 154);
+            this.Res768p.TabIndex = 8;
+            this.Res768p.Text = "1366x768";
+            this.Res768p.UseVisualStyleBackColor = true;
+            this.Res768p.Click += new System.EventHandler(this.Res768p_Click);
+            // 
+            // Res1440p
+            // 
+            this.Res1440p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res1440p.Location = new System.Drawing.Point(1019, 91);
+            this.Res1440p.Name = "Res1440p";
+            this.Res1440p.Size = new System.Drawing.Size(220, 153);
+            this.Res1440p.TabIndex = 7;
+            this.Res1440p.Text = "2560x1440";
+            this.Res1440p.UseVisualStyleBackColor = true;
+            this.Res1440p.Click += new System.EventHandler(this.Res1440p_Click);
             // 
             // ResolutionLabel
             // 
@@ -125,52 +168,23 @@
             this.ResolutionLabel.TabIndex = 4;
             this.ResolutionLabel.Text = "Resolution";
             // 
-            // Res1080p
+            // CustomResButton
             // 
-            this.Res1080p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Res1080p.Location = new System.Drawing.Point(793, 301);
-            this.Res1080p.Name = "Res1080p";
-            this.Res1080p.Size = new System.Drawing.Size(220, 205);
-            this.Res1080p.TabIndex = 5;
-            this.Res1080p.Text = "1920x1080";
-            this.Res1080p.UseVisualStyleBackColor = true;
-            this.Res1080p.Click += new System.EventHandler(this.Res1080p_Click);
-            // 
-            // ResolutionTextBox
-            // 
-            this.ResolutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResolutionTextBox.Location = new System.Drawing.Point(793, 43);
-            this.ResolutionTextBox.Name = "ResolutionTextBox";
-            this.ResolutionTextBox.Size = new System.Drawing.Size(446, 38);
-            this.ResolutionTextBox.TabIndex = 6;
-            // 
-            // Res768p
-            // 
-            this.Res768p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Res768p.Location = new System.Drawing.Point(1019, 301);
-            this.Res768p.Name = "Res768p";
-            this.Res768p.Size = new System.Drawing.Size(220, 205);
-            this.Res768p.TabIndex = 8;
-            this.Res768p.Text = "1366x768";
-            this.Res768p.UseVisualStyleBackColor = true;
-            this.Res768p.Click += new System.EventHandler(this.Res768p_Click);
-            // 
-            // Res1440p
-            // 
-            this.Res1440p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Res1440p.Location = new System.Drawing.Point(1019, 91);
-            this.Res1440p.Name = "Res1440p";
-            this.Res1440p.Size = new System.Drawing.Size(220, 204);
-            this.Res1440p.TabIndex = 7;
-            this.Res1440p.Text = "2560x1440";
-            this.Res1440p.UseVisualStyleBackColor = true;
-            this.Res1440p.Click += new System.EventHandler(this.Res1440p_Click);
+            this.CustomResButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomResButton.Location = new System.Drawing.Point(793, 410);
+            this.CustomResButton.Name = "CustomResButton";
+            this.CustomResButton.Size = new System.Drawing.Size(446, 99);
+            this.CustomResButton.TabIndex = 9;
+            this.CustomResButton.Text = "Custom Resolution";
+            this.CustomResButton.UseVisualStyleBackColor = true;
+            this.CustomResButton.Click += new System.EventHandler(this.CustomResButton_Click);
             // 
             // R6Clicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 521);
+            this.Controls.Add(this.CustomResButton);
             this.Controls.Add(this.Res768p);
             this.Controls.Add(this.Res1440p);
             this.Controls.Add(this.ResolutionTextBox);
@@ -199,11 +213,12 @@
         private System.Windows.Forms.Label ClickIntervalLabel;
         private System.Windows.Forms.TextBox IntervalBox;
         private System.Windows.Forms.Button Res4k;
-        private System.Windows.Forms.Label ResolutionLabel;
         private System.Windows.Forms.Button Res1080p;
         private System.Windows.Forms.TextBox ResolutionTextBox;
         private System.Windows.Forms.Button Res768p;
         private System.Windows.Forms.Button Res1440p;
+        private System.Windows.Forms.Label ResolutionLabel;
+        private System.Windows.Forms.Button CustomResButton;
     }
 }
 
