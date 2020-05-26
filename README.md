@@ -5,10 +5,10 @@ I made this because I wanted to make something I'd use myself, It's pretty handy
 It's currently made to funtion properly at 1920x1080 resolution, I don't think it'll work correctly on anything else but I might try make different resolution modes for it.
 
 ## Supported Resolutions (All in 16:9 Aspect Ratio)
-- 3840 x 2160
-- 2560 x 1440
-- 1920 x 1080
-- 1366 x 768
+- 3840 x 2160 (4K)
+- 2560 x 1440 (1440p)
+- 1920 x 1080 (1080p)
+- 1366 x 768 (768p)
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
