@@ -6,9 +6,9 @@ It's currently made to funtion properly at 1920x1080 resolution, I don't think i
 
 ## Supported Resolutions (All in 16:9 Aspect Ratio)
 - 3840 x 2160 (4K)
-- 2560 x 1440 (1440p)
-- 1920 x 1080 (1080p)
-- 1366 x 768 (768p)
+- 2560 x 1440
+- 1920 x 1080
+- 1366 x 768
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
