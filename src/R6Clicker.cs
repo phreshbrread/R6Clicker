@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using R6Clicker.src;
 
 namespace R6Clicker
 {
     public partial class R6Clicker : Form
     {
-        //int displayResX = 1920;
-        //int displayResY = 1080;
-        int mouseClickX = 860;
-        int mouseClickY = 960;
-
+        public int mouseClickX = 860;
+        public int mouseClickY = 960;
         
-
         public R6Clicker()
         {
             // window size should be 1267, 560
@@ -84,6 +81,12 @@ namespace R6Clicker
             Refresh();
             mouse_event(MOUSEEVENTF_LEFTDOWN, mouseClickX, mouseClickY, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, mouseClickX, mouseClickY, 0, 0);
+        }
+
+        private void CustomResButton_Click(object sender, EventArgs e)
+        {
+            CustomResolutionForm customResolution = new CustomResolutionForm();
+            customResolution.Show();
         }
     }
 }
