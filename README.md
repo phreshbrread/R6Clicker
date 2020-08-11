@@ -1,7 +1,8 @@
 # R6Clicker
-An automatic Terrorist Hunt/Training Grounds restart clicker for renown grinding.
+An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
 I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
+**This does not give you any XP** - or at least it shouldn't.
 
 ## Supported Resolutions (All in 16:9 Aspect Ratio)
 - 3840 x 2160 (4K)
@@ -12,7 +13,7 @@ I made this because I wanted to make something useful, It's pretty handy for gri
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
 2. Also set MM preferences to big maps only, I recommend just leaving it only on Fortress.
-_Note: If the map is too small you will die too fast and wont gain renown._
+_Note: If the map is too small you will die too fast and wont gain any renown._
 3. Load into a solo training grounds match and start the clicker, it will then start working.
 4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically clicks the restart button so the process repeats itself.
 
