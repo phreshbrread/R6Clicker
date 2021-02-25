@@ -2,13 +2,14 @@
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
 I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
-**This does not give you any XP** - or at least it shouldn't.
+**This does not give you any XP** (or at least it shouldn't).
 
 ## Supported Resolutions (All in 16:9 Aspect Ratio)
 - 3840 x 2160 (4K)
 - 2560 x 1440
 - 1920 x 1080
 - 1366 x 768
+- ### Program also supports custom mouse positions if your res isn't listed.
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
@@ -21,6 +22,9 @@ You'll probably only gain around 20-36 renown each time but if you leave it on f
 Also note that it isn't that uncommon for the game to kick you back to the main menu, I'm not really sure whether that's the fault of the clicker or the game, the same thing seems to happen with other clickers though so it could just be Ubisoft adding measures to stop renown grinding.
 
 ## Changelog
+### v3
+- Added support for custom mouse positions
+- Changed some UI and made the window slightly less wide
 ### v2
 - Added support for 4 common resolutions
 ### v1
