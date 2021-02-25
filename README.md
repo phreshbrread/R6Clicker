@@ -9,7 +9,7 @@ I made this because I wanted to make something useful, It's pretty handy for gri
 - 2560 x 1440
 - 1920 x 1080
 - 1366 x 768
-- ### Program also supports custom mouse positions if your res isn't listed.
+- ### Program also supports custom mouse positions in case your resolution isn't listed.
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
