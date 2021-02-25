@@ -29,6 +29,3 @@ Also note that it isn't that uncommon for the game to kick you back to the main 
 - Added support for 4 common resolutions
 ### v1
 - Initial upload
-
-## Todo
-- Allow for custom resolutions and maybe aspect ratios
