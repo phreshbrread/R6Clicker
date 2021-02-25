@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using R6Clicker.src;
+using R6Clicker;
 
 namespace R6Clicker
 {
     public partial class R6Clicker : Form
     {
+        // Declare variables
         public int mouseClickX = 860;
         public int mouseClickY = 960;
+
+        public string ResTextBoxText;
         
         public R6Clicker()
         {
-            // window size should be 1267, 560
             InitializeComponent();
 
             IntervalBox.Text = ClickTimer.Interval.ToString();
-            ResolutionTextBox.Text = "1920x1080";
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 
         #region Import DLLs and stuff
@@ -32,7 +35,12 @@ namespace R6Clicker
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            ClickTimer.Interval = Convert.ToInt32(IntervalBox.Text);
+            try // Try to convert the contents of the click timer box into an integer, otherwise do nothing rather than throwing an exception.
+            {
+                ClickTimer.Interval = Convert.ToInt32(IntervalBox.Text);
+            }
+            catch (FormatException) { }
+            
             ClickTimer.Enabled = true;
         }
 
@@ -44,34 +52,34 @@ namespace R6Clicker
         #region Resolution button clicks
         private void Res4k_Click(object sender, EventArgs e)
         {
-            ResolutionTextBox.Text = "3840x2160";
-
             mouseClickX = 1675;
             mouseClickY = 1940;
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res1440p_Click(object sender, EventArgs e)
         {
-            ResolutionTextBox.Text = "2560x1440";
-
             mouseClickX = 1120;
             mouseClickY = 1290;
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res1080p_Click(object sender, EventArgs e)
         {
-            ResolutionTextBox.Text = "1920x1080";
-
             mouseClickX = 860;
             mouseClickY = 960;
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res768p_Click(object sender, EventArgs e)
         {
-            ResolutionTextBox.Text = "1366x768";
-
             mouseClickX = 595;
             mouseClickY = 690;
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 #endregion
 
@@ -83,10 +91,29 @@ namespace R6Clicker
             mouse_event(MOUSEEVENTF_LEFTUP, mouseClickX, mouseClickY, 0, 0);
         }
 
-        private void CustomResButton_Click(object sender, EventArgs e)
+        private void SetButton_Click(object sender, EventArgs e)
         {
-            CustomResolutionForm customResolution = new CustomResolutionForm();
-            customResolution.Show();
+            try
+            {
+                mouseClickX = Convert.ToInt32(CustomPosBoxX.Text);
+                mouseClickY = Convert.ToInt32(CustomPosBoxY.Text);
+            }
+            catch (FormatException)
+            {
+
+            }
+
+            SetMousePos(mouseClickX, mouseClickY);
+        }
+
+        public void SetMousePos(int x, int y) // Set the mouse position based on the MouseClickX and Y variables
+        {
+            ResTextBoxText = x + " x " + y;
+
+            mouseClickX = x;
+            mouseClickY = y;
+
+            ResolutionTextBox.Text = ResTextBoxText;
         }
     }
 }
