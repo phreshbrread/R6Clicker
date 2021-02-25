@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,6 +61,9 @@
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>R6Clicker.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,12 +78,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\CustomResolutionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\CustomResolutionForm.Designer.cs">
-      <DependentUpon>CustomResolutionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\R6Clicker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,9 +96,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="src\CustomResolutionForm.resx">
-      <DependentUpon>CustomResolutionForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\R6Clicker.resx">
       <DependentUpon>R6Clicker.cs</DependentUpon>
     </EmbeddedResource>
