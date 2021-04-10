@@ -18,8 +18,8 @@ _Note: If the map is too small you will die too fast and wont gain any renown._
 3. Load into a solo training grounds match and start the clicker, it will then start working.
 4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically clicks the restart button so the process repeats itself.
 
-You'll probably only gain around 20-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since it'll double the amount of renown you gain each time.
-Also note that it isn't that uncommon for the game to kick you back to the main menu, I'm not really sure whether that's the fault of the clicker or the game, the same thing seems to happen with other clickers though so it could just be Ubisoft adding measures to stop renown grinding.
+You'll probably only gain around 18-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since it'll double the amount of renown you gain each time.
+Also note that it isn't that uncommon for the game to kick you back to the main menu, however I'm not really sure whether that's the fault of the clicker or the game.
 
 ## Changelog
 ### v3
