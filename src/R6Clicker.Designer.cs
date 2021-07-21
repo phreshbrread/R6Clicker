@@ -116,7 +116,7 @@
             this.Res4k.Name = "Res4k";
             this.Res4k.Size = new System.Drawing.Size(220, 153);
             this.Res4k.TabIndex = 3;
-            this.Res4k.Text = "1675, 1940 (4K)";
+            this.Res4k.Text = "2400, 1980 (4K)";
             this.Res4k.UseVisualStyleBackColor = true;
             this.Res4k.Click += new System.EventHandler(this.Res4k_Click);
             // 
@@ -127,7 +127,7 @@
             this.Res1080p.Name = "Res1080p";
             this.Res1080p.Size = new System.Drawing.Size(220, 154);
             this.Res1080p.TabIndex = 5;
-            this.Res1080p.Text = "860, 960 (1080p)";
+            this.Res1080p.Text = "1200, 985 (1080p)";
             this.Res1080p.UseVisualStyleBackColor = true;
             this.Res1080p.Click += new System.EventHandler(this.Res1080p_Click);
             // 
@@ -147,7 +147,7 @@
             this.Res768p.Name = "Res768p";
             this.Res768p.Size = new System.Drawing.Size(220, 154);
             this.Res768p.TabIndex = 8;
-            this.Res768p.Text = "595, 690 (768p)";
+            this.Res768p.Text = "900, 690 (768p)";
             this.Res768p.UseVisualStyleBackColor = true;
             this.Res768p.Click += new System.EventHandler(this.Res768p_Click);
             // 
@@ -158,7 +158,7 @@
             this.Res1440p.Name = "Res1440p";
             this.Res1440p.Size = new System.Drawing.Size(220, 153);
             this.Res1440p.TabIndex = 7;
-            this.Res1440p.Text = "1120, 1290 (1440p)";
+            this.Res1440p.Text = "1600, 1325 (1440p)";
             this.Res1440p.UseVisualStyleBackColor = true;
             this.Res1440p.Click += new System.EventHandler(this.Res1440p_Click);
             // 

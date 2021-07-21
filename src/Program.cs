@@ -13,7 +13,15 @@ namespace R6Clicker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new R6Clicker());
+            //try
+            //{
+                Application.Run(new R6Clicker());
+            //}
+            //catch (ArgumentOutOfRangeException)
+            //{
+                //MessageBox.Show("Please enter a value above 0", "Input Out Of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //Application.Restart();
+            //}
         }
     }
 }
