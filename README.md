@@ -22,6 +22,10 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 The program also sends keyboard inputs to the game to prevent you from getting kicked.
 
 ## Changelog
+### v4 (Not released yet)
+- Cleaned up and rewrote a bunch of code
+- Added some exception handling
+- TODO make it actually restart each round
 ### v3
 - Added support for custom mouse positions
 - Changed some UI and made the window slightly less wide
