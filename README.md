@@ -19,7 +19,7 @@ _Note: If the map is too small you will die too fast and wont gain any renown._
 4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically hits the restart button so the process repeats itself.
 
 You'll probably only gain around 18-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since it'll double the amount of renown you gain each time.
-The clicker also sends keyboard inputs to the game to prevent you from getting kicked.
+The program also sends keyboard inputs to the game to prevent you from getting kicked.
 
 ## Changelog
 ### v3
