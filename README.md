@@ -2,9 +2,9 @@
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
 I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
-**This does not give you any XP** (or at least it shouldn't).
+**This program will not level you up as you do not gain any XP** (or at least it shouldn't).
 
-## Supported Resolutions (All in 16:9 Aspect Ratio)
+## Supported Resolutions
 - 3840 x 2160 (4K)
 - 2560 x 1440
 - 1920 x 1080
@@ -13,13 +13,13 @@ I made this because I wanted to make something useful, It's pretty handy for gri
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
-2. Also set MM preferences to big maps only, I recommend just leaving it only on Fortress.
+2. Also set MM preferences to big maps only, I recommend just leaving it only on Fortress or Theme Park.
 _Note: If the map is too small you will die too fast and wont gain any renown._
-3. Load into a solo training grounds match and start the clicker, it will then start working.
-4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically clicks the restart button so the process repeats itself.
+3. Load into a solo training grounds match on easy mode and start the clicker.
+4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically hits the restart button so the process repeats itself.
 
 You'll probably only gain around 18-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since it'll double the amount of renown you gain each time.
-Also note that it isn't that uncommon for the game to kick you back to the main menu, however I'm not really sure whether that's the fault of the clicker or the game.
+The program also sends keyboard inputs to the game to prevent you from getting kicked.
 
 ## Changelog
 ### v3
