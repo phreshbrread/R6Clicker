@@ -179,7 +179,6 @@
             this.CustomPosBoxX.Name = "CustomPosBoxX";
             this.CustomPosBoxX.Size = new System.Drawing.Size(220, 30);
             this.CustomPosBoxX.TabIndex = 11;
-            this.CustomPosBoxX.Text = "X";
             this.CustomPosBoxX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CustomPosLabel
@@ -210,7 +209,6 @@
             this.CustomPosBoxY.Name = "CustomPosBoxY";
             this.CustomPosBoxY.Size = new System.Drawing.Size(220, 30);
             this.CustomPosBoxY.TabIndex = 13;
-            this.CustomPosBoxY.Text = "Y";
             this.CustomPosBoxY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // R6Clicker
