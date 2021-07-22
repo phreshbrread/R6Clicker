@@ -27,7 +27,6 @@ The program also sends keyboard inputs to the game to prevent you from getting k
 - Added some exception handling
 - Now saves and loads all values to and from a settings file in the program directory
   - To reset all settings just delete the settings.ini file
-- TODO make it actually restart each round
 ### v3
 - Added support for custom mouse positions
 - Changed some UI and made the window slightly less wide
