@@ -74,7 +74,6 @@ namespace R6Clicker
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
-
         private const int MOUSEEVENTF_LEFTDOWN = 0x02;
         private const int MOUSEEVENTF_LEFTUP = 0x04;
         #endregion
@@ -89,6 +88,11 @@ namespace R6Clicker
             ResolutionTextBox.Text = ResTextBoxText;
         }
 
+        public static void RelativeMove(int relx, int rely)
+        {
+            mouse_event(0x0001, relx, rely, 0, 0); //Move the mouse slightly so it accepts input
+        }
+
         private void ClickTimer_Tick(object sender, EventArgs e) // Run every time the timer ticks.
         {
             System.Diagnostics.Process[] p = System.Diagnostics.Process.GetProcessesByName("RainbowSix"); // Search for R6 process
@@ -101,6 +105,7 @@ namespace R6Clicker
             Refresh();
 
             SetCursorPos(mouseClickX, mouseClickY);
+            RelativeMove(2, 2);
             mouse_event(MOUSEEVENTF_LEFTDOWN, mouseClickX, mouseClickY, 0, 0);
             System.Threading.Thread.Sleep(50);
             mouse_event(MOUSEEVENTF_LEFTUP, mouseClickX, mouseClickY, 0, 0);
@@ -121,7 +126,7 @@ namespace R6Clicker
         #region Button clicks
         private void StartButton_Click(object sender, EventArgs e)
         {
-            // Try to convert the contents of the click timer box into an integer, otherwise do nothing.
+            // Try to convert the contents of the click timer box into an integer, otherwise show an error message.
             Int32.TryParse(IntervalBox.Text, out int interval);
             if (interval > 0)
             {
