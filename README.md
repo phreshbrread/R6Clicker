@@ -1,5 +1,3 @@
-**This program is not working with the current version of R6, It should be fixed soon hopefully**
-
 # R6Clicker
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
@@ -24,7 +22,8 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 The program also sends keyboard inputs to the game to prevent you from getting kicked.
 
 ## Changelog
-### v4 (Not released yet)
+### v4
+- Changed the way it clicks so that it actually works
 - Cleaned up and rewrote a bunch of code
 - Added some exception handling
 - Now saves and loads all values to and from a settings file in the program directory
