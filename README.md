@@ -22,6 +22,8 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 **Please note that this program cannot be used in the background while you do other things as it moves the mouse cursor every set interval**
 
 ## Changelog
+### v4.1
+- Added hotkeys to make stopping & starting easier
 ### v4
 - Changed the way it clicks so that it actually works
 - Cleaned up and rewrote a bunch of code
