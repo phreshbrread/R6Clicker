@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Diagnostics;
 
 namespace R6Clicker
 {
@@ -12,6 +13,23 @@ namespace R6Clicker
         public int mouseClickY;
 
         public string ResTextBoxText;
+
+        #region Import DLLs and stuff
+        [DllImport("USER32.DLL")]
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll", EntryPoint = "SetCursorPos")]
+        private static extern bool SetCursorPos(int x, int y);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
+        private const int MOUSEEVENTF_LEFTDOWN = 0x02;
+        private const int MOUSEEVENTF_LEFTUP = 0x04;
+
+        // 2. Import the RegisterHotKey Method
+        [DllImport("user32.dll")]
+        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
+        #endregion
 
         public R6Clicker()
         {
@@ -62,21 +80,47 @@ namespace R6Clicker
                 CustomPosBoxY.Text = lines[4];
             }
 
+            // 3. Register HotKey
+
+            // Set an unique id to your Hotkey, it will be used to
+            // identify which hotkey was pressed in your code to execute something
+            int UniqueHotkeyId = 1;
+            int HotKeyCode = (int)Keys.F9;
+            // Register the "F9" hotkey
+            bool F9Registered = RegisterHotKey(
+                this.Handle, UniqueHotkeyId, 0x0000, HotKeyCode
+            );
+            // Repeat the same process but with F10
+            int SecondHotkeyId = 2;
+            int SecondHotKeyKey = (int)Keys.F10;
+            bool F10Registered = RegisterHotKey(
+                this.Handle, SecondHotkeyId, 0x0000, SecondHotKeyKey
+            );
+
             SetMousePos(mouseClickX, mouseClickY);
         }
 
-        #region Import DLLs and stuff
-        [DllImport("USER32.DLL")]
-        public static extern bool SetForegroundWindow(IntPtr hWnd);
+        protected override void WndProc(ref Message m)
+        {
+            // 5. Catch when a HotKey is pressed
+            if (m.Msg == 0x0312)
+            {
+                int id = m.WParam.ToInt32();
 
-        [DllImport("user32.dll", EntryPoint = "SetCursorPos")]
-        private static extern bool SetCursorPos(int x, int y);
+                // 6. Handle what will happen once a respective hotkey is pressed
+                switch (id)
+                {
+                    case 1:
+                        StopButton_Click(null, null);
+                        break;
+                    case 2:
+                        StartButton_Click(null, null);
+                        break;
+                }
+            }
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-        public static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
-        private const int MOUSEEVENTF_LEFTDOWN = 0x02;
-        private const int MOUSEEVENTF_LEFTUP = 0x04;
-        #endregion
+            base.WndProc(ref m);
+        }
 
         public void SetMousePos(int x, int y) // Set the mouse position based on the MouseClickX and Y variables
         {
