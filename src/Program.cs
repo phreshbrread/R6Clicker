@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace R6Clicker
 {
     static class Program
