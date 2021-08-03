@@ -2,7 +2,7 @@
 
 namespace R6Clicker
 {
-    public class FileRW
+    public class WriteSettingsToFile
     {
         public static void WriteSettings(int timerTickInterval, int mX, int mY, int cusX, int cusY)
         {

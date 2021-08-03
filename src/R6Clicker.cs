@@ -188,7 +188,7 @@ namespace R6Clicker
                 CustomPosBoxY.Text = "200";
             }
 
-            FileRW.WriteSettings(Convert.ToInt32(IntervalBox.Text), mouseClickX, mouseClickY, Convert.ToInt32(CustomPosBoxX.Text), Convert.ToInt32(CustomPosBoxY.Text));
+            WriteSettingsToFile.WriteSettings(Convert.ToInt32(IntervalBox.Text), mouseClickX, mouseClickY, Convert.ToInt32(CustomPosBoxX.Text), Convert.ToInt32(CustomPosBoxY.Text));
         }
 
         #region Button clicks
