@@ -49,6 +49,7 @@ namespace R6Clicker
                 WriteSets();
             }
 
+            // TODO Read settings using the WriteSettingsToFile thing aswell
             // Read each line of the file into a string array.
             // Each element of the array is one line of the file.
             string[] lines = File.ReadAllLines("settings.ini");
