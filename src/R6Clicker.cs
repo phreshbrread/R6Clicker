@@ -49,6 +49,7 @@ namespace R6Clicker
                 WriteSets();
             }
 
+            // TODO Read settings using the WriteSettingsToFile thing aswell
             // Read each line of the file into a string array.
             // Each element of the array is one line of the file.
             string[] lines = File.ReadAllLines("settings.ini");
@@ -96,8 +97,6 @@ namespace R6Clicker
             bool F10Registered = RegisterHotKey(
                 this.Handle, SecondHotkeyId, 0x0000, SecondHotKeyKey
             );
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
 
         protected override void WndProc(ref Message m)
@@ -134,26 +133,52 @@ namespace R6Clicker
 
         public static void RelativeMove(int relx, int rely)
         {
-            mouse_event(0x0001, relx, rely, 0, 0); //Move the mouse slightly so it accepts input
+            mouse_event(0x0001, relx, rely, 0, 0); // Move the mouse slightly so the game accepts input
         }
 
         private void ClickTimer_Tick(object sender, EventArgs e) // Run every time the timer ticks.
         {
-            System.Diagnostics.Process[] p = System.Diagnostics.Process.GetProcessesByName("RainbowSix"); // Search for R6 process
+            Process[] p = Process.GetProcessesByName("RainbowSix"); // Search for R6 process
             if (p.Length > 0) // Check if window was found
             {
                 SetForegroundWindow(p[0].MainWindowHandle); // Bring Siege to foreground
             }
-            System.Diagnostics.Debug.WriteLine(p.Length.ToString());
+            Debug.WriteLine(p.Length.ToString());
 
             Refresh();
 
-            SetCursorPos(mouseClickX, mouseClickY);
+            // Clicks buttons in pre-game selection screen
+            if (mouseClickX == 2400 && mouseClickY == 1325) // 4K
+            {
+                //ClickMouse(x, y);
+            }
+            else if (mouseClickX == 1600 && mouseClickY == 1325) // 1440p
+            {
+                //ClickMouse(x, y);
+            }
+            else if (mouseClickX == 1200 && mouseClickY == 985) // 1080p
+            {
+                ClickMouse(159, 379);
+                ClickMouse(126, 353);
+                ClickMouse(224, 334);
+            }
+            else // 768p
+            {
+                //ClickMouse(x, y);
+            }
+
+            // Click where the restart button is
+            ClickMouse(mouseClickX, mouseClickY);
+        }
+
+        void ClickMouse(int x, int y)
+        {
+            SetCursorPos(x, y);
             RelativeMove(2, 2);
-            mouse_event(MOUSEEVENTF_LEFTDOWN, mouseClickX, mouseClickY, 0, 0);
-            System.Threading.Thread.Sleep(50);
-            mouse_event(MOUSEEVENTF_LEFTUP, mouseClickX, mouseClickY, 0, 0);
-            System.Threading.Thread.Sleep(50);
+            mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
+            System.Threading.Thread.Sleep(25);
+            mouse_event(MOUSEEVENTF_LEFTUP, x, y, 0, 0);
+            System.Threading.Thread.Sleep(25);
         }
 
         void WriteSets()
@@ -164,7 +189,7 @@ namespace R6Clicker
                 CustomPosBoxY.Text = "200";
             }
 
-            FileRW.WriteSettings(Convert.ToInt32(IntervalBox.Text), mouseClickX, mouseClickY, Convert.ToInt32(CustomPosBoxX.Text), Convert.ToInt32(CustomPosBoxY.Text));
+            WriteSettingsToFile.WriteSettings(Convert.ToInt32(IntervalBox.Text), mouseClickX, mouseClickY, Convert.ToInt32(CustomPosBoxX.Text), Convert.ToInt32(CustomPosBoxY.Text));
         }
 
         #region Button clicks
@@ -193,32 +218,24 @@ namespace R6Clicker
         {
             mouseClickX = 2400;
             mouseClickY = 1980;
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res1440p_Click(object sender, EventArgs e)
         {
             mouseClickX = 1600;
             mouseClickY = 1325;
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res1080p_Click(object sender, EventArgs e)
         {
             mouseClickX = 1200;
             mouseClickY = 985;
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void Res768p_Click(object sender, EventArgs e)
         {
             mouseClickX = 900;
             mouseClickY = 690;
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
 
         private void SetButton_Click(object sender, EventArgs e)
@@ -229,8 +246,6 @@ namespace R6Clicker
                 mouseClickY = Convert.ToInt32(CustomPosBoxY.Text);
             }
             catch (FormatException) { }
-
-            SetMousePos(mouseClickX, mouseClickY);
         }
         #endregion
     }

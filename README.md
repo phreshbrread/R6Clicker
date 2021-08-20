@@ -22,6 +22,10 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 **Please note that this program cannot be used in the background while you do other things as it moves the mouse cursor every set interval**
 
 ## Changelog
+### v4.2
+- Cleaned up some repetitive code
+- Now clicks specific buttons on the pre-game selection to speed up the process
+  - Saves around 25 seconds with a 2500 interval
 ### v4.1
 - Added hotkeys to make stopping & starting easier
 ### v4
