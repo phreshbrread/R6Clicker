@@ -4,7 +4,7 @@ An automatic Training Grounds renown grinder for Rainbow Six Siege.
 I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
 **This program will not level you up as you do not gain any XP** (or at least it shouldn't).
 
-## Supported Resolutions
+## Supported Resolutions (for automatic mouse positioning)
 - 3840 x 2160 (4K)
 - 2560 x 1440
 - 1920 x 1080
@@ -25,7 +25,7 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 ### v4.2
 - Cleaned up some repetitive code
 - Now clicks specific buttons on the pre-game selection to speed up the process
-  - Saves around 25 seconds with a 2500 interval
+  - Saves around 25 seconds with a 2500ms click interval
 ### v4.1
 - Added hotkeys to make stopping & starting easier
 ### v4
