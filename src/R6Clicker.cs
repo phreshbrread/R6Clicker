@@ -14,6 +14,15 @@ namespace R6Clicker
 
         public string ResTextBoxText;
 
+        #region Help Message
+        private string helpMessage = "1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY. \n" +
+            "2. Also set MM preferences to big maps only, I recommend just leaving it only on Fortress. \n" +
+            "3. Load into a solo training grounds match on easy mode and start the clicker. \n" +
+            "4. You should eventually die and fail but still recieve some renown bonus, the clicker automatically hits the restart button so the process repeats itself. \n" +
+            "\n" +
+            "More info can be found on the GitHub page.";
+        #endregion
+
         #region Import DLLs and stuff
         [DllImport("USER32.DLL")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -46,12 +55,9 @@ namespace R6Clicker
 
                 IntervalBox.Text = ClickTimer.Interval.ToString();
 
-                WriteSets();
+                WriteSettings();
             }
 
-            // TODO Read settings using the WriteSettingsToFile thing aswell
-            // Read each line of the file into a string array.
-            // Each element of the array is one line of the file.
             string[] lines = File.ReadAllLines("settings.ini");
 
             // Set values to those from settings file
@@ -97,6 +103,8 @@ namespace R6Clicker
             bool F10Registered = RegisterHotKey(
                 this.Handle, SecondHotkeyId, 0x0000, SecondHotKeyKey
             );
+
+            SetMousePos(mouseClickX, mouseClickY);
         }
 
         protected override void WndProc(ref Message m)
@@ -158,9 +166,9 @@ namespace R6Clicker
             }
             else if (mouseClickX == 1200 && mouseClickY == 985) // 1080p
             {
-                ClickMouse(159, 379);
-                ClickMouse(126, 353);
-                ClickMouse(224, 334);
+                ClickMouse(159, 379, 50);
+                ClickMouse(126, 353, 50);
+                ClickMouse(224, 334, 50);
             }
             else // 768p
             {
@@ -168,20 +176,20 @@ namespace R6Clicker
             }
 
             // Click where the restart button is
-            ClickMouse(mouseClickX, mouseClickY);
+            ClickMouse(mouseClickX, mouseClickY, 25);
         }
 
-        void ClickMouse(int x, int y)
+        void ClickMouse(int x, int y, int delay)
         {
             SetCursorPos(x, y);
             RelativeMove(2, 2);
             mouse_event(MOUSEEVENTF_LEFTDOWN, x, y, 0, 0);
-            System.Threading.Thread.Sleep(25);
+            System.Threading.Thread.Sleep(delay);
             mouse_event(MOUSEEVENTF_LEFTUP, x, y, 0, 0);
-            System.Threading.Thread.Sleep(25);
+            System.Threading.Thread.Sleep(delay);
         }
 
-        void WriteSets()
+        void WriteSettings()
         {
             if (Convert.ToInt32(CustomPosBoxX.Text) <= 0 || Convert.ToInt32(CustomPosBoxY.Text) <= 0)
             {
@@ -189,8 +197,18 @@ namespace R6Clicker
                 CustomPosBoxY.Text = "200";
             }
 
-            WriteSettingsToFile.WriteSettings(Convert.ToInt32(IntervalBox.Text), mouseClickX, mouseClickY, Convert.ToInt32(CustomPosBoxX.Text), Convert.ToInt32(CustomPosBoxY.Text));
+            /* 0 is Timer tick interval
+             * 1 is last x pos
+             * 2 is last y
+             * 3 is custom x pos
+             * 4 is custom y
+             */
+
+            string[] lines = { "" + Convert.ToInt32(IntervalBox.Text), "" + mouseClickX, "" + mouseClickY, "" + Convert.ToInt32(CustomPosBoxX.Text), "" + Convert.ToInt32(CustomPosBoxY.Text) };
+
+            File.WriteAllLines("settings.ini", lines);
         }
+
 
         #region Button clicks
         private void StartButton_Click(object sender, EventArgs e)
@@ -200,7 +218,7 @@ namespace R6Clicker
             if (interval > 0)
             {
                 ClickTimer.Interval = interval;
-                WriteSets();
+                WriteSettings();
                 ClickTimer.Enabled = true;
             }
             else
@@ -212,30 +230,48 @@ namespace R6Clicker
         private void StopButton_Click(object sender, EventArgs e)
         {
             ClickTimer.Enabled = false;
+            WriteSettings();
         }
 
         private void Res4k_Click(object sender, EventArgs e)
         {
             mouseClickX = 2400;
             mouseClickY = 1980;
+
+            SetMousePos(mouseClickX, mouseClickY);
+            WriteSettings();
         }
 
         private void Res1440p_Click(object sender, EventArgs e)
         {
             mouseClickX = 1600;
             mouseClickY = 1325;
+
+            SetMousePos(mouseClickX, mouseClickY);
+            WriteSettings();
         }
 
         private void Res1080p_Click(object sender, EventArgs e)
         {
             mouseClickX = 1200;
             mouseClickY = 985;
+
+            SetMousePos(mouseClickX, mouseClickY);
+            WriteSettings();
         }
 
         private void Res768p_Click(object sender, EventArgs e)
         {
             mouseClickX = 900;
             mouseClickY = 690;
+
+            SetMousePos(mouseClickX, mouseClickY);
+            WriteSettings();
+        }
+
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(helpMessage, "How to use", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SetButton_Click(object sender, EventArgs e)
@@ -246,6 +282,9 @@ namespace R6Clicker
                 mouseClickY = Convert.ToInt32(CustomPosBoxY.Text);
             }
             catch (FormatException) { }
+
+            SetMousePos(mouseClickX, mouseClickY);
+            WriteSettings();
         }
         #endregion
     }
