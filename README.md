@@ -1,7 +1,7 @@
 # R6Clicker
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
-I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
+I made this because I wanted to make something useful, It's pretty handy for grinding for skins, operators and whatever other stuff.
 **This program will not level you up as you do not gain any XP** (or at least it shouldn't).
 
 Direct download for the latest version can be found [here](https://github.com/phreshbrread/R6Clicker/releases/download/v5.0/R6Clicker.zip)
