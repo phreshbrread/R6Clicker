@@ -23,7 +23,7 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 - 1366 x 768
 - ### Program also supports custom mouse positions in case your resolution isn't listed.
 
-## Even though R6 doesn't even run properly on Linux yet, even when it does I probably won't make a native build as I know absolutely nothing about Linux development, let alone cross-platform between it and Windows.
+### Even though R6 doesn't even run properly on Linux yet, even when it does I probably won't make a native build as I know absolutely nothing about Linux development, let alone cross-platform between it and Windows.
 
 ## Changelog
 ### v5.0
