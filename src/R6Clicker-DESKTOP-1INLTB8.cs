@@ -6,16 +6,13 @@ using System.Diagnostics;
 
 namespace R6Clicker
 {
-    // IMPORTANT!!
-    // TODO change all mouse positions to account for new update
-
     public partial class R6Clicker : Form
     {
         // Declare variables
         public int mouseClickX;
         public int mouseClickY;
 
-        public string MousePosTextBoxText;
+        public string ResTextBoxText;
 
         #region Help Message
         private string helpMessage = "1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY. \n" +
@@ -50,8 +47,8 @@ namespace R6Clicker
             if (File.Exists("settings.ini") == false)
             {
                 ClickTimer.Interval = 2000;
-                mouseClickX = 1320;
-                mouseClickY = 990;
+                mouseClickX = 1200;
+                mouseClickY = 985;
 
                 CustomPosBoxX.Text = Convert.ToString(200);
                 CustomPosBoxY.Text = Convert.ToString(200);
@@ -134,12 +131,12 @@ namespace R6Clicker
 
         public void SetMousePos(int x, int y) // Set the mouse position based on the MouseClickX and Y variables
         {
-            //MousePosTextBoxText = x + ", " + y;
+            ResTextBoxText = x + ", " + y;
 
             mouseClickX = x;
             mouseClickY = y;
 
-            MousePosTextBox.Text = x + ", " + y;
+            ResolutionTextBox.Text = ResTextBoxText;
         }
 
         public static void RelativeMove(int relx, int rely)
@@ -159,29 +156,23 @@ namespace R6Clicker
             Refresh();
 
             // Clicks buttons in pre-game selection screen
-            if (mouseClickX == 2645 && mouseClickY == 2000) // 4K
+            if (mouseClickX == 2400 && mouseClickY == 1325) // 4K
             {
-                ClickMouse(413, 607, 50);
-                ClickMouse(220, 565, 50);
-                ClickMouse(522, 549, 50);
+                //ClickMouse(x, y);
             }
-            else if (mouseClickX == 1760 && mouseClickY == 1330) // 1440p
+            else if (mouseClickX == 1600 && mouseClickY == 1325) // 1440p
             {
-                ClickMouse(207, 404, 50);
-                ClickMouse(145, 377, 50);
-                ClickMouse(347, 371, 50);
+                //ClickMouse(x, y);
             }
-            else if (mouseClickX == 1320 && mouseClickY == 990) // 1080p
+            else if (mouseClickX == 1200 && mouseClickY == 985) // 1080p
             {
-                ClickMouse(176, 301, 50);
-                ClickMouse(108, 280, 50);
-                ClickMouse(171, 276, 50);
+                ClickMouse(159, 379, 50);
+                ClickMouse(126, 353, 50);
+                ClickMouse(224, 334, 50);
             }
             else // 768p
             {
-                ClickMouse(144, 217, 50);
-                ClickMouse(76, 202, 50);
-                ClickMouse(183, 198, 50);
+                //ClickMouse(x, y);
             }
 
             // Click where the restart button is
@@ -232,7 +223,7 @@ namespace R6Clicker
             }
             else
             {
-                MessageBox.Show("Please enter a value within 0 and 2147483647.", "Input Out Of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a value within 0 to 2147483647.", "Input Out Of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -242,37 +233,37 @@ namespace R6Clicker
             WriteSettings();
         }
 
-        private void Res4k_Click_1(object sender, EventArgs e)
+        private void Res4k_Click(object sender, EventArgs e)
         {
-            mouseClickX = 2645;
-            mouseClickY = 2000;
+            mouseClickX = 2400;
+            mouseClickY = 1980;
 
             SetMousePos(mouseClickX, mouseClickY);
             WriteSettings();
         }
 
-        private void Res1440p_Click_1(object sender, EventArgs e)
+        private void Res1440p_Click(object sender, EventArgs e)
         {
-            mouseClickX = 1760;
-            mouseClickY = 1330;
+            mouseClickX = 1600;
+            mouseClickY = 1325;
 
             SetMousePos(mouseClickX, mouseClickY);
             WriteSettings();
         }
 
-        private void Res1080p_Click_1(object sender, EventArgs e)
+        private void Res1080p_Click(object sender, EventArgs e)
         {
-            mouseClickX = 1320;
-            mouseClickY = 990;
+            mouseClickX = 1200;
+            mouseClickY = 985;
 
             SetMousePos(mouseClickX, mouseClickY);
             WriteSettings();
         }
 
-        private void Res768p_Click_1(object sender, EventArgs e)
+        private void Res768p_Click(object sender, EventArgs e)
         {
-            mouseClickX = 950;
-            mouseClickY = 710;
+            mouseClickX = 900;
+            mouseClickY = 690;
 
             SetMousePos(mouseClickX, mouseClickY);
             WriteSettings();
