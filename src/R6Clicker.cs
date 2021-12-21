@@ -6,9 +6,6 @@ using System.Diagnostics;
 
 namespace R6Clicker
 {
-    // IMPORTANT!!
-    // TODO change all mouse positions to account for new update
-
     public partial class R6Clicker : Form
     {
         // Declare variables

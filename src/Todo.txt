@@ -1,1 +1,2 @@
-﻿1. Add an automatic shutdown system (This will probably take a really long time)
+﻿1. Make code better
+2. Add an automatic shutdown system (This will probably take a really long time)
