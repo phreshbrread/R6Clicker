@@ -17,6 +17,10 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 **Please note that this program cannot be used in the background while you do other things as it moves the mouse cursor every set interval**
 
 ## QnA
+### Q: Does this count as cheating?
+A: Some would say yes, others would argue otherwise. I personally do not believe this program to count as cheats nor did I create it with the intent of cheating. Having a high amount of renown does not grant the player with an advantage and therefore should not be classified as a cheat.
+### Q: Can I get banned for using this?
+A: Most likely not, I and some others have been using this for a while now and none of our accounts have been penalized.
 ### Q: Does monitor resolution and aspect ratio matter?
 A: Yes, unfortunately due to the way this program is, it will only work at 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile.
 ### Q: Can I set a custom mouse position if I use a different res or aspect ratio?
