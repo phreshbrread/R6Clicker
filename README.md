@@ -18,11 +18,6 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 
 ## QnA
 ### Q: Does monitor resolution and aspect ratio matter?
-A: Yes, unfortunately due to the way this program is, it will only work at 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile
-
-## Supported Resolutions
-- 3840 x 2160 (4K)
-- 2560 x 1440
-- 1920 x 1080
-- 1366 x 768
-- ### Program also supports custom mouse positions in case your resolution isn't listed.
+A: Yes, unfortunately due to the way this program is, it will only work at 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile.
+### Q: Can I set a custom mouse position if I use a different res or aspect ratio?
+A: Yes, there is a box that allows you to put in a custom mouse x and y position, unfortunately though each cycle will take around 30 seconds longer than it usually would due to the inability for it to click buttons on the pre-game screen. For finding mouse positions I use [WinSpy++](http://www.catch22.net/software/winspy#).
