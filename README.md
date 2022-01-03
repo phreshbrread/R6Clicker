@@ -4,7 +4,7 @@ An automatic Training Grounds renown grinder for Rainbow Six Siege.
 I made this because I wanted to make something useful, It's pretty handy for grinding for skins and operators and stuff and It usually works pretty well.
 **This will NOT level up your account**.
 
-Direct download for the latest version can be found [here](https://github.com/phreshbrread/R6Clicker/releases/tag/v7.0)
+Direct download for the latest version can be found [here](https://github.com/phreshbrread/R6Clicker/releases/download/v7.0/R6Clicker.exe)
 
 ## How To Use
 1. Set Training Grounds matchmaking preferences to PROTECT HOSTAGE ONLY.
