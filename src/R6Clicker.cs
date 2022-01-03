@@ -35,7 +35,7 @@ namespace R6Clicker
         private const int MOUSEEVENTF_LEFTDOWN = 0x02;
         private const int MOUSEEVENTF_LEFTUP = 0x04;
 
-        // 2. Import the RegisterHotKey Method
+        // Import the RegisterHotKey Method
         [DllImport("user32.dll")]
         public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
         #endregion
@@ -44,6 +44,7 @@ namespace R6Clicker
         {
             InitializeComponent();
 
+            // If the settings file doesn't exist then make one
             if (File.Exists("settings.ini") == false)
             {
                 ClickTimer.Interval = 2000;
@@ -109,12 +110,12 @@ namespace R6Clicker
 
         protected override void WndProc(ref Message m)
         {
-            // 5. Catch when a HotKey is pressed
+            // Catch when a HotKey is pressed
             if (m.Msg == 0x0312)
             {
                 int id = m.WParam.ToInt32();
 
-                // 6. Handle what will happen once a respective hotkey is pressed
+                // Handle what will happen once a respective hotkey is pressed
                 switch (id)
                 {
                     case 1:
@@ -131,8 +132,6 @@ namespace R6Clicker
 
         public void SetMousePos(int x, int y) // Set the mouse position based on the MouseClickX and Y variables
         {
-            //MousePosTextBoxText = x + ", " + y;
-
             mouseClickX = x;
             mouseClickY = y;
 
@@ -161,24 +160,28 @@ namespace R6Clicker
                 ClickMouse(413, 607, 50);
                 ClickMouse(220, 565, 50);
                 ClickMouse(522, 549, 50);
+                ClickMouse(933, 374, 50);
             }
             else if (mouseClickX == 1760 && mouseClickY == 1330) // 1440p
             {
                 ClickMouse(207, 404, 50);
                 ClickMouse(145, 377, 50);
                 ClickMouse(347, 371, 50);
+                ClickMouse(622, 245, 50);
             }
             else if (mouseClickX == 1320 && mouseClickY == 990) // 1080p
             {
                 ClickMouse(176, 301, 50);
                 ClickMouse(108, 280, 50);
                 ClickMouse(171, 276, 50);
+                ClickMouse(465, 177, 50);
             }
             else // 768p
             {
                 ClickMouse(144, 217, 50);
                 ClickMouse(76, 202, 50);
                 ClickMouse(183, 198, 50);
+                ClickMouse(333, 128, 50);
             }
 
             // Click where the restart button is
@@ -209,19 +212,19 @@ namespace R6Clicker
              * 3 is custom x pos
              * 4 is custom y
              */
-
+            
+            // Find a way to handle FormatException and OverflowException
             string[] lines = { "" + Convert.ToInt32(IntervalBox.Text), "" + mouseClickX, "" + mouseClickY, "" + Convert.ToInt32(CustomPosBoxX.Text), "" + Convert.ToInt32(CustomPosBoxY.Text) };
 
             File.WriteAllLines("settings.ini", lines);
         }
-
 
         #region Button clicks
         private void StartButton_Click(object sender, EventArgs e)
         {
             // Try to convert the contents of the click timer box into an integer, otherwise show an error message.
             Int32.TryParse(IntervalBox.Text, out int interval);
-            if (interval > 0)
+            if (interval >= 225)
             {
                 ClickTimer.Interval = interval;
                 WriteSettings();
@@ -229,7 +232,7 @@ namespace R6Clicker
             }
             else
             {
-                MessageBox.Show("Please enter a value within 0 and 2147483647.", "Input Out Of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a value within 225 and 2147483647.", "Input Out Of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
