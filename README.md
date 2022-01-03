@@ -16,7 +16,7 @@ _Note: If the map is too small you will die too fast and wont gain any renown._
 You'll probably only gain around 18-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since obviously double the amount of renown gained in a certain time frame.
 **Please note that this program cannot be used in the background while you do other things as it moves the mouse cursor every set interval**
 
-## Supported Resolutions
+## Supported Resolutions (16:9 only)
 - 3840 x 2160 (4K)
 - 2560 x 1440
 - 1920 x 1080
