@@ -16,6 +16,10 @@ _Note: If the map is too small you will die too fast and wont gain any renown._
 You'll probably only gain around 18-36 renown each time but if you leave it on for an entire day it adds up. I recommend also using a booster if you have one since obviously double the amount of renown gained in a certain time frame.
 **Please note that this program cannot be used in the background while you do other things as it moves the mouse cursor every set interval**
 
+## QnA
+### Q: Does monitor resolution and aspect ratio matter?
+A: Yes, unfortunately due to the way this program is, it will only work at 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile
+
 ## Supported Resolutions
 - 3840 x 2160 (4K)
 - 2560 x 1440
