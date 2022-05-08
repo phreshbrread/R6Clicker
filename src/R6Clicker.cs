@@ -213,7 +213,7 @@ namespace R6Clicker
              * 4 is custom y
              */
             
-            // Find a way to handle FormatException and OverflowException
+            // TODO Find a way to handle FormatException and OverflowException
             string[] lines = { "" + Convert.ToInt32(IntervalBox.Text), "" + mouseClickX, "" + mouseClickY, "" + Convert.ToInt32(CustomPosBoxX.Text), "" + Convert.ToInt32(CustomPosBoxY.Text) };
 
             File.WriteAllLines("settings.ini", lines);
