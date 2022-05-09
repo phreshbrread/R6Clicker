@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{36258244-9088-4831-AAAF-79B7C37ACC28}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Program.cs">
+    <Files>
+      <File FileName="README.md" Line="6" Column="1" />
+      <File FileName="src/Program.cs" Line="18" Column="10" />
+      <File FileName="src/R6Clicker.cs" Line="99" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="R6Clicker" expanded="True">
+            <Node name="R6Clicker" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="Program.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.R6Clicker PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
