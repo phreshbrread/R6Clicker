@@ -18,10 +18,12 @@ You'll probably only gain around 18-36 renown each time but if you leave it on f
 
 ## QnA
 ### Q: Does this count as cheating?
-A: Some would say yes, others would argue otherwise. I personally do not believe this program to count as cheats nor did I create it with the intent of cheating. Having a high amount of renown does not grant the player with an advantage and therefore should not be classified as a cheat.
+A: Maybe. This gives no real in-game advantage so I'd say no.
 ### Q: Can I get banned for using this?
 A: Most likely not, I and some others have been using this for a while now and none of our accounts have been penalized.
 ### Q: Does monitor resolution and aspect ratio matter?
 A: Yes, unfortunately due to the way this program is, it will only work with manually programmed resolutions, currently the working ones are 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile.
 ### Q: Can I set a custom mouse position if I use a different res or aspect ratio?
 A: Yes, there is a box that allows you to put in a custom mouse x and y position, unfortunately though each cycle will take around 30 seconds longer than it usually would due to the inability for it to click buttons on the pre-game screen. For finding mouse positions I use [WinSpy++](http://www.catch22.net/software/winspy#).
+### Q: Linux build/support?
+A: I have no idea how to build for Linux, though it does work flawlessly through WINE.
