@@ -157,38 +157,38 @@ namespace R6Clicker
             // Clicks buttons in pre-game selection screen
             if (mouseClickX == 2645 && mouseClickY == 2000) // 4K
             {
-                ClickMouse(413, 607, 50);
-                ClickMouse(220, 565, 50);
-                ClickMouse(522, 549, 50);
-                ClickMouse(933, 374, 50);
+                SendClick(413, 607, 50);
+                SendClick(220, 565, 50);
+                SendClick(522, 549, 50);
+                SendClick(933, 374, 50);
             }
             else if (mouseClickX == 1760 && mouseClickY == 1330) // 1440p
             {
-                ClickMouse(207, 404, 50);
-                ClickMouse(145, 377, 50);
-                ClickMouse(347, 371, 50);
-                ClickMouse(622, 245, 50);
+                SendClick(207, 404, 50);
+                SendClick(145, 377, 50);
+                SendClick(347, 371, 50);
+                SendClick(622, 245, 50);
             }
             else if (mouseClickX == 1320 && mouseClickY == 990) // 1080p
             {
-                ClickMouse(176, 301, 50);
-                ClickMouse(108, 280, 50);
-                ClickMouse(171, 276, 50);
-                ClickMouse(465, 177, 50);
+                SendClick(176, 301, 50);
+                SendClick(108, 280, 50);
+                SendClick(171, 276, 50);
+                SendClick(465, 177, 50);
             }
             else // 768p
             {
-                ClickMouse(144, 217, 50);
-                ClickMouse(76, 202, 50);
-                ClickMouse(183, 198, 50);
-                ClickMouse(333, 128, 50);
+                SendClick(144, 217, 50);
+                SendClick(76, 202, 50);
+                SendClick(183, 198, 50);
+                SendClick(333, 128, 50);
             }
 
             // Click where the restart button is
-            ClickMouse(mouseClickX, mouseClickY, 25);
+            SendClick(mouseClickX, mouseClickY, 25);
         }
 
-        void ClickMouse(int x, int y, int delay)
+        void SendClick(int x, int y, int delay)
         {
             SetCursorPos(x, y);
             RelativeMove(2, 2);
@@ -210,8 +210,7 @@ namespace R6Clicker
              * 1 is last x pos
              * 2 is last y
              * 3 is custom x pos
-             * 4 is custom y
-             */
+             * 4 is custom y */
             
             // TODO Find a way to handle FormatException and OverflowException
             string[] lines = { "" + Convert.ToInt32(IntervalBox.Text), "" + mouseClickX, "" + mouseClickY, "" + Convert.ToInt32(CustomPosBoxX.Text), "" + Convert.ToInt32(CustomPosBoxY.Text) };
@@ -219,7 +218,7 @@ namespace R6Clicker
             File.WriteAllLines("settings.ini", lines);
         }
 
-        #region Button clicks
+        #region Form Button clicks
         private void StartButton_Click(object sender, EventArgs e)
         {
             // Try to convert the contents of the click timer box into an integer, otherwise show an error message.
