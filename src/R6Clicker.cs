@@ -23,7 +23,7 @@ namespace R6Clicker
             "More info can be found on the GitHub page.";
         #endregion
 
-        #region Import DLLs and stuff
+        #region DLL stuff
         [DllImport("USER32.DLL")]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
@@ -45,7 +45,7 @@ namespace R6Clicker
             InitializeComponent();
 
             // If the settings file doesn't exist then make one
-            if (File.Exists("settings.ini") == false)
+            if (!File.Exists("settings.ini"))
             {
                 ClickTimer.Interval = 2000;
                 mouseClickX = 1320;
@@ -88,8 +88,7 @@ namespace R6Clicker
                 CustomPosBoxY.Text = lines[4];
             }
 
-            // 3. Register HotKey
-
+            // 3. Register Hotkey
             // Set an unique id to your Hotkey, it will be used to
             // identify which hotkey was pressed in your code to execute something
             int UniqueHotkeyId = 1;
@@ -119,10 +118,10 @@ namespace R6Clicker
                 switch (id)
                 {
                     case 1:
-                        StopButton_Click(null, null);
+                        StartButton_Click(null, null);
                         break;
                     case 2:
-                        StartButton_Click(null, null);
+                        StopButton_Click(null, null);
                         break;
                 }
             }
@@ -150,7 +149,6 @@ namespace R6Clicker
             {
                 SetForegroundWindow(p[0].MainWindowHandle); // Bring Siege to foreground
             }
-            Debug.WriteLine(p.Length.ToString());
 
             Refresh();
 
@@ -200,11 +198,26 @@ namespace R6Clicker
 
         void WriteSettings()
         {
-            if (Convert.ToInt32(CustomPosBoxX.Text) <= 0 || Convert.ToInt32(CustomPosBoxY.Text) <= 0)
+            try
+            {
+                if (Convert.ToInt32(CustomPosBoxX.Text) <= 0 || Convert.ToInt32(CustomPosBoxY.Text) <= 0)
+                {
+                    CustomPosBoxX.Text = "200";
+                    CustomPosBoxY.Text = "200";
+                }
+            }
+            catch (FormatException)
             {
                 CustomPosBoxX.Text = "200";
                 CustomPosBoxY.Text = "200";
             }
+            catch (OverflowException)
+            {
+                CustomPosBoxX.Text = "200";
+                CustomPosBoxY.Text = "200";
+                SetMousePos(mouseClickX, mouseClickY);
+            }
+            
 
             /* 0 is Timer tick interval
              * 1 is last x pos
@@ -218,7 +231,7 @@ namespace R6Clicker
             File.WriteAllLines("settings.ini", lines);
         }
 
-        #region Form Button clicks
+        #region Form button click events
         private void StartButton_Click(object sender, EventArgs e)
         {
             // Try to convert the contents of the click timer box into an integer, otherwise show an error message.
@@ -290,10 +303,11 @@ namespace R6Clicker
                 mouseClickY = Convert.ToInt32(CustomPosBoxY.Text);
             }
             catch (FormatException) { }
+            catch (OverflowException) { }
 
             SetMousePos(mouseClickX, mouseClickY);
             WriteSettings();
-        }
+            }
         #endregion
     }
 }

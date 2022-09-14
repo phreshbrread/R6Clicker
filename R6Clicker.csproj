@@ -110,7 +110,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.md" />
-    <None Include="src\Changelog.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
