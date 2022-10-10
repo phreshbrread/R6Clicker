@@ -26,4 +26,5 @@ A: Yes, unfortunately due to the way this program is, it will only work with man
 ### Q: Can I set a custom mouse position if I use a different res or aspect ratio?
 A: Yes, there is a box that allows you to put in a custom mouse x and y position, unfortunately though each cycle will take around 30 seconds longer than it usually would due to the inability for it to click buttons on the pre-game screen. For finding mouse positions I use [WinSpy++](http://www.catch22.net/software/winspy#).
 ### Q: Linux build/support?
-A: I have no idea how to build for Linux, though it does work flawlessly through WINE.
+A: Trying to convert this project into cross-platform dotnet would probably be more trouble than its worth.
+If for whatever reason you want to use this program on Linux despite a lack of online Siege capability, then run this through WINE using something like bottles, it appeared to work flawlessly during my testing
