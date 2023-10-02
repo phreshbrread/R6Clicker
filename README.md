@@ -1,3 +1,5 @@
+# *This has not been updated in quite a long time. I'm not sure if it still works with current Siege*
+
 # R6Clicker
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
 
@@ -25,6 +27,5 @@ A: Most likely not, I and some others have been using this for a while now and n
 A: Yes, unfortunately due to the way this program is, it will only work with manually programmed resolutions, currently the working ones are 4K, 1440p, 1080p and 1366x768p, on 16:9 aspect ratio aswell. I would like to eventually find a way to make it more versatile.
 ### Q: Can I set a custom mouse position if I use a different res or aspect ratio?
 A: Yes, there is a box that allows you to put in a custom mouse x and y position, unfortunately though each cycle will take around 30 seconds longer than it usually would due to the inability for it to click buttons on the pre-game screen. For finding mouse positions I use [WinSpy++](http://www.catch22.net/software/winspy#).
-### Q: Linux build/support?
-A: Trying to convert this project into cross-platform dotnet would be way more trouble than its worth - though I would like to do a cross-platform rewrite someday.
-For the meantime, if for whatever reason you want to use this program on Linux despite a lack of online Siege capability, then run this through WINE using something like [bottles](https://usebottles.com/), it appeared to work flawlessly during my testing
+### Q: Is there a Linux build?
+A: Currently there is no native Linux build planned since this was built specifically for Windows from the start due to a lack of knowledge. This tool works how it should through WINE though.
