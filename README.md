@@ -1,4 +1,4 @@
-# *This has not been updated in quite a long time. I'm not sure if it still works with current Siege*
+# *This project is no longer maintained. I have no idea if it still works as I stopped playing Siege years ago.*
 
 # R6Clicker
 An automatic Training Grounds renown grinder for Rainbow Six Siege.
